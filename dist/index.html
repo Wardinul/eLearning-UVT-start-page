@@ -1,0 +1,268 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-LEARNING UVT</title>
+
+    <!-- Font Awesome Icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!-- CSS Only -->
+
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- JS Bootstrap Bundle -->
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="main">
+
+        <!-- Navbar -->
+        
+        <nav class="navbar navbar-dark">
+            <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Conectare</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Acasă</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Calendar</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Informații
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Infocentru</a></li>
+            <li><a class="dropdown-item" href="#">Secretariat virtual FEEA</a></li>
+            <li><a class="dropdown-item" href="#">Secretariat virtual F. de Drept</a></li>
+            <li><a class="dropdown-item" href="#">Secretariat virtual FEFS</a></li>
+            <li><a class="dropdown-item" href="#">Secretariat virtual F. de Fizică</a></li>
+            <li><a class="dropdown-item" href="#">Secretariat virtual FMT</a></li>
+            <li><a class="dropdown-item" href="#">Secretariat virtual FSP</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ghiduri</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            </ul>
+            </div>
+            </div>
+        </nav>
+
+        <!-- Carousel -->
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+            </ol>
+        
+            <div class="uvt position-absolute d-flex">
+              <div class="uvt__logo">
+                <img class="img-responsive" src="/images/uvteapa-removebg-preview.png" alt="asd">
+              </div>
+                <h1 class="uvt__quote">Descopera Excelenta</h1>
+            </div>
+        
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2500">
+                <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2500">
+                <img src="https://images.pexels.com/photos/261909/pexels-photo-261909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2500">
+                <img src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" style="height:100%" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+
+          <!-- Benefits Section -->
+
+          <section class="benefit">
+            <header class="benefit__header">
+                <h1 class="benefit__title">Ce vei găsi pe platformă</h1>
+                <h2 class="benefit__subtitle">Cursuri - Resurse - Comunitate</h2>
+            </header>
+
+            <div class="benefit__container row">
+                <div class="benefit__container__item col col-12 col-md-6">
+                    <div class="card">
+                        <i class="card__icon fa-solid fa-mobile-screen-button"></i>
+                        <h2 class="card__title">Cursuri online și offline</h2>
+                        <p class="card__paragraph">Aplicația „eLearning UVT” permite accesul de pe dispozitive mobile la platforma oficială de educație online a Universității de Vest din Timișoara.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit__container__item col col-12 col-md-6">
+                    <div class="card">
+                        <i class="card__icon fa-solid fa-book"></i>
+                        <h2 class="card__title">Resurse și activități de învățare</h2>
+                        <p class="card__paragraph">Resurse de eLearning pentru desfășurare de activități didactice folosite în procesele de predare-învățare-evaluare în regim online.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit__container__item col col-12">
+                    <div class="card">
+                        <i class="card__icon fa-sharp fa-solid fa-graduation-cap"></i>
+                        <h2 class="card__title">Utilizatori externi</h2>
+                        <p class="card__paragraph">Din această secțiune se poate accesa platforma de elearning pentru utilizatorii externi care au acest drept și nu dețin conturi din domeniul @e-uvt.ro
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+          </section>
+
+          <!-- Instruments Section -->
+
+          <section class="instruments">
+            <h1 class="instruments__title">Instrumente</h1>
+            <p class="instruments__subtitle">Tehnologiile folosite crează o experiență plăcută de predare și învățare</p>
+
+            <div class="instruments__container d-flex row justify-content-around mx-4">
+              <div class="instruments__container__item col-12 col-sm-5 col-lg-2">
+                <i class="instruments__container__item__icon fa-solid fa-person-chalkboard"></i>
+                <p class="instruments__container__item__text">Platforma de eLearning Moodle</p>
+              </div>
+
+              <div class="instruments__container__item col-12 col-sm-5 col-lg-2">
+                <i class="instruments__container__item__icon fa-solid fa-mobile-screen-button"></i>
+                <p class="instruments__container__item__text">Branded Mobile app</p>
+              </div>
+
+              <div class="instruments__container__item col-12 col-sm-5 col-lg-2">
+                <i class="instruments__container__item__icon fa-solid fa-globe"></i>
+                <p class="instruments__container__item__text">WebEx</p>
+              </div>
+
+              <div class="instruments__container__item col-12 col-sm-5 col-lg-2">
+                <i class="instruments__container__item__icon fa-sharp fa-solid fa-file-pen"></i>
+                <p class="instruments__container__item__text">TurnItIn</p>
+              </div>
+
+              <div class="instruments__container__item col-12 col-sm-5 col-lg-2">
+                <i class="instruments__container__item__icon fa-solid fa-users-rectangle"></i>
+                <p class="instruments__container__item__text">MS Teams</p>
+              </div>
+
+              <div class="instruments__container__item col-12 col-sm-5 col-lg-2">
+                <i class="instruments__container__item__icon fa-solid fa-person-chalkboard"></i>
+                <p class="instruments__container__item__text">Wiris</p>
+              </div>
+
+              <div class="instruments__container__item col-12 col-sm-5 col-lg-2">
+                <i class="instruments__container__item__icon fa-solid fa-person-chalkboard"></i>
+                <p class="instruments__container__item__text">Google Meet</p>
+              </div>
+
+              <div class="instruments__container__item col-12 col-sm-5 col-lg-2">
+                <i class="instruments__container__item__icon fa-solid fa-person-chalkboard"></i>
+                <p class="instruments__container__item__text">Annoto</p>
+              </div>
+            </div>
+          </section>
+
+          <footer class="footer">
+            <div class="footer__container mx-1 row text-center">
+              <div class="footer__container__address col col-12 d-flex flex-column align-items-center">
+                <h3 class="footer__container__title">
+                  Universitatea de Vest din Timișoara
+                </h3>
+                <address>
+                  Adresă: Bd. Vasile Pârvan nr. 4,
+                  Timișoara, cod poștal 300223,
+                  Județul Timiș, România, EU
+                </address>
+              </div>
+
+              <div class="footer__container__download col col-12">
+                <h3 class="footer__container__title">
+                  Descărcați aplicația dedicată
+                </h3>
+                <div class="download-links d-flex flex-column align-items-center">
+                  <img src="/images/google.png" alt="google play" class="google-play">
+                  <img src="/images/apple.png" alt="app store" class="app-store">
+                </div>
+              </div>
+
+              <div class="footer__container__terms col col-12 d-flex flex-column">
+                <h3 class="footer__container__title">
+                  Termeni și condiții
+                </h3>
+                <a href="#" class="footer__container__terms__link">Politica de cookies a UVT</a>
+                <a href="#" class="footer__container__terms__link">Politica de confidențialitate</a>
+                <a href="#" class="footer__container__terms__link">GDPR</a>
+              </div>
+
+              <div class="footer__container__status col col-12">
+                Nu sunteti conectat. - <a href="#">Conectare</a>
+              </div>
+
+              <div class="footer__container__logo col col-12">
+                <img src="/images/uvt logo.png" alt="uvt logo image">
+              </div>
+
+              <div class="footer__container__copyright col col-12 d-flex">
+                <div class="col col-6">
+                  <img src="/images/moodle.png" alt="moodle logo">
+                  <img src="/images/elso.png" alt="e-learning software logo">
+                </div>
+                <div class="col col-6">
+                  <img src="/images/uninet.png" alt="uninet logo">
+                </div>
+              </div>
+
+              <div class="footer__container__social">
+                <a aria-label="Visit our Facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a aria-label="Visit our Twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a aria-label="Visit our instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a aria-label="Visit our YouTube" href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a aria-label="Visit our LinkedIn" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+
+            </div>
+          </footer>
+
+    </main>
+
+</body>
+</html>
