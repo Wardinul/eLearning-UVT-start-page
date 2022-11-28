@@ -74,7 +74,8 @@ html {
   background-repeat: no-repeat;
   color: white;
   padding: 1rem 2.5rem;
-  max-width: 500px;
+  min-width: 500px;
+  width: 500px;
 }
 .main .benefit__container__item .card__icon {
   text-align: center;
@@ -95,24 +96,33 @@ html {
   font-size: 15px;
   text-align: center;
 }
+.main .instruments__container {
+  gap: 1.5rem;
+  padding-bottom: 6rem;
+}
 .main .instruments__container__item {
   position: relative;
   text-align: center;
   cursor: pointer;
   width: 300px;
   border-radius: 15px;
-  margin: 2rem 0;
-  padding: 1rem 1rem;
+  margin: 1rem 0;
+  padding: 2rem 1rem 0.5rem 1rem;
   transition: 0.5s;
 }
 .main .instruments__container__item:hover {
-  margin: 3rem 0;
-  padding: 2rem;
+  color: #3471B7;
+  font-size: 18px;
+  padding: 1.5rem 1rem 1rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.main .instruments__container__item:hover .icon {
+  color: #3471B7;
 }
 .main .instruments__container__item__icon {
   font-size: 50px;
   color: #084371;
+  transition: 0.5s;
 }
 .main .instruments__container__item__text {
   margin: 0.7rem 0 0 0;
