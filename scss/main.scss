@@ -82,7 +82,8 @@ html{
                     background-repeat: no-repeat;
                     color: white;
                     padding: 1rem 2.5rem;
-                    max-width: 500px;
+                    min-width: 500px;
+                    width: 500px;
                     &__icon{
                         text-align: center;
                         font-size: 50px;
@@ -109,23 +110,31 @@ html{
             text-align: center;
         }
         &__container{
+            gap: 1.5rem;
+            padding-bottom: 6rem;
             &__item{
                 position: relative;
                 text-align: center;
                 cursor: pointer;
                 width: 300px;
                 border-radius: 15px;
-                margin: 2rem 0;
-                padding: 1rem 1rem;
+                margin: 1rem 0;
+                padding: 2rem 1rem .5rem 1rem;
                 transition: .5s;
                 &:hover {
-                    margin: 3rem 0;
-                    padding: 2rem;
+                    color: #3471B7;
+                    font-size: 18px;
+                    padding: 1.5rem 1rem 1rem 1rem;
                     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+                    .icon{
+                        color: #3471B7;
+                    }
                 }
                 &__icon{
                     font-size: 50px;
                     color: #084371;
+                    transition: .5s;
                 }
                 &__text{
                     margin: .7rem 0 0 0;
