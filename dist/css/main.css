@@ -74,8 +74,8 @@ html {
   background-repeat: no-repeat;
   color: white;
   padding: 1rem 2.5rem;
-  min-width: 500px;
-  width: 500px;
+  min-width: 450px;
+  width: 450px;
 }
 .main .benefit__container__item .card__icon {
   text-align: center;
