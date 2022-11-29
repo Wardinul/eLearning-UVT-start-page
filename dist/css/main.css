@@ -22,9 +22,14 @@ html {
 }
 .main .carousel .uvt {
   z-index: 1;
-  bottom: 40px;
+  bottom: 30px;
   left: 20px;
   width: 50%;
+}
+@media screen and (min-width: 720px) {
+  .main .carousel .uvt {
+    bottom: 20px;
+  }
 }
 .main .carousel .uvt__logo {
   background-color: rgb(255, 255, 255);
@@ -45,6 +50,16 @@ html {
   height: 40vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (min-width: 720px) {
+  .main .carousel .carousel-inner .carousel-item img {
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 960px) {
+  .main .carousel .carousel-inner .carousel-item img {
+    height: 100vh;
+  }
 }
 .main .benefit__header {
   padding-top: 2rem;
