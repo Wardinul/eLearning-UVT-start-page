@@ -116,7 +116,7 @@ html{
                     }
                     @media screen and (min-width:1200px) {
                         max-width: 100%;
-                        min-width: 0;
+                        min-width: 370px;
                         }
                     &__icon{
                         text-align: center;
@@ -264,10 +264,23 @@ html{
             }
             &__social{
                 a{
+                    position: relative;
                     text-decoration: none;
                     color: white;
                     font-size: 21px;
                     margin: 0 .5rem;
+                    // bottom: 0;
+                    // transition: bottom .5s;
+                    i{
+                        position: relative;
+                        bottom: 0;
+                        transition: bottom .3s;
+                    }
+                    &:hover{
+                        i{
+                            bottom: 1rem;
+                        }
+                    }
                 }
             }
         }
