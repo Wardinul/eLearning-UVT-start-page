@@ -120,7 +120,7 @@ html {
 @media screen and (min-width: 1200px) {
   .main .benefit__container__item .card {
     max-width: 100%;
-    min-width: 0;
+    min-width: 370px;
   }
 }
 .main .benefit__container__item .card__icon {
@@ -243,8 +243,17 @@ html {
   max-width: 100px;
 }
 .main .footer__container__social a {
+  position: relative;
   text-decoration: none;
   color: white;
   font-size: 21px;
   margin: 0 0.5rem;
+}
+.main .footer__container__social a i {
+  position: relative;
+  bottom: 0;
+  transition: bottom 0.3s;
+}
+.main .footer__container__social a:hover i {
+  bottom: 1rem;
 }/*# sourceMappingURL=main.css.map */
