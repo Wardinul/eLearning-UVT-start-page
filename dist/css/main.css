@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -22,11 +23,45 @@ html {
   width: 100%;
   z-index: 3;
 }
+.main .navbar img {
+  width: 170px;
+}
+.main .navbar__connect-btn {
+  border-radius: 4px;
+  background-color: #1B99D4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.main .navbar__connect-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.main .navbar__connect-btn span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.main .navbar__connect-btn:hover span {
+  padding-right: 20px;
+}
+.main .navbar__connect-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 .main .carousel .uvt {
   position: absolute;
   z-index: 1;
-  bottom: 30px;
-  margin-bottom: 1.5rem;
+  bottom: 0px;
+  margin-bottom: 1rem;
   left: 20px;
   width: 50%;
 }
