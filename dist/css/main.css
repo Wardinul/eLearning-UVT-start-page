@@ -41,6 +41,7 @@ nav {
   left: 0;
   height: 70px;
   width: 100%;
+  border-bottom: 3px solid #5990cf;
   display: flex;
   align-items: center;
   background: linear-gradient(130deg, rgb(12, 71, 120) 0%, rgb(52, 113, 183) 88%, rgb(52, 113, 183) 100%);
@@ -298,13 +299,13 @@ body.dark .switch::before {
   font-size: clamp(1.4rem, 2.4vw, 3rem);
 }
 .main .carousel .carousel-inner .carousel-item img {
-  height: 40vh;
+  height: 55vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   .main .carousel .carousel-inner .carousel-item img {
-    height: 60vh;
+    height: 70vh;
   }
 }
 @media screen and (min-width: 992px) {
