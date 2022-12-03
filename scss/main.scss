@@ -24,6 +24,14 @@ html{
         img{
             width: 170px;
         }
+        .nav-link{
+            margin: 0 .5rem;
+            &:hover,
+            &:focus{
+                background-color: #1B99D4;
+                outline: none;
+            }
+        }
         &__connect-btn{
             border-radius: 4px;
             background-color: #1B99D4;
@@ -47,7 +55,9 @@ html{
                     transition: 0.5s;
                 }
             }
-            &:hover {
+            &:hover,
+            &:focus {
+                outline: none;
                 span {
                     padding-right: 20px;
                     &:after {
@@ -130,9 +140,11 @@ html{
                 display: flex;
                 justify-content: center;
                 margin: 1.5rem 0;
+                outline: none;
 
                 .card{
                     background-image: url(/images/card-bg.jpeg);
+                    cursor: pointer;
                     background-size: cover;
                     background-repeat: no-repeat;
                     color: white;
@@ -170,6 +182,9 @@ html{
     }
 
     .instruments{
+        @media screen and (min-width:992px) {
+            padding: 0 10rem;
+        }
         &__title{
             font-weight: bold;
             font-size: 23px;
@@ -189,7 +204,7 @@ html{
                 margin: 0 7.5rem;
             }
             padding-bottom: 6rem;
-            padding-top: 3rem;
+            padding-top: .5rem;
             &__item{
                 position: relative;
                 text-align: center;
@@ -202,6 +217,8 @@ html{
                 &__card{
                     position: relative;
                     height: 150px;
+                    max-width: 350px;
+                    padding: 0 1rem;
                     border-radius: 10px;
                     bottom: -2rem;
                     transition: position 0.5s, bottom 0.5s;
@@ -270,7 +287,9 @@ html{
                 &__link{
                     text-decoration: none;
                     color: white;
-                    &:hover{
+                    outline: none;
+                    &:hover,
+                    &:focus{
                         text-decoration: underline;
                     }
                 }
@@ -280,6 +299,7 @@ html{
                     position: relative;
                     z-index: 1;
                     color: white;
+                    outline: none;
                     text-decoration: none;
                     &::before {
                         content: '';
@@ -291,7 +311,8 @@ html{
                         background-color: #3471B7;
                         transition: .5s;
                     }
-                    &:hover {
+                    &:hover,
+                    &:focus {
                         &::before {
                             width: 110%;
                         }
@@ -311,6 +332,7 @@ html{
             &__social{
                 a{
                     position: relative;
+                    outline: none;
                     text-decoration: none;
                     color: white;
                     font-size: 21px;
@@ -320,7 +342,8 @@ html{
                         bottom: 0;
                         transition: bottom .3s;
                     }
-                    &:hover{
+                    &:hover,
+                    &:focus{
                         i{
                             bottom: 1rem;
                         }
@@ -329,4 +352,199 @@ html{
             }
         }
     }
-}
+}  
+
+  nav {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      height: 70px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background: rgb(12,71,120);
+      background: linear-gradient(130deg, rgba(12,71,120,1) 0%, rgba(52,113,183,1) 88%, rgba(52,113,183,1) 100%);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+      color: white;
+      .logo {
+          display: flex;
+          align-items: center;
+          margin: 0 24px;
+      }
+      .sidebar {
+          position: fixed;
+          top: 0;
+          left: -100%;
+          height: 100%;
+          width: 260px;
+          padding: 20px 0;
+          background-color: #3471B7;
+          box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+          transition: all 0.4s ease;
+      }
+  }
+  .logo {
+      .menu-icon {
+          color: var(--text-color);;
+          font-size: 24px;
+          margin-right: 14px;
+          cursor: pointer;
+      }
+      .logo-name {
+          color: var(--text-color);;
+          font-size: 22px;
+          font-weight: 500;
+      }
+  }
+  nav.open {
+      .sidebar {
+          left: 0;
+      }
+      ~ {
+          .overlay {
+              opacity: 1;
+              left: 260px;
+              pointer-events: auto;
+          }
+      }
+  }
+  .sidebar {
+      .sidebar-content {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 30px 16px;
+      }
+  }
+  .sidebar-content {
+      .list {
+      list-style: none;
+      
+          .nav-link {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+        padding: 14px 12px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: var(--tran-02);
+        &:hover {
+          background-color: var(--primary-color);
+          .icon {
+            color: #fff;
+          }
+          .link {
+            color: #fff;
+          }
+        }
+  
+        .icon {
+          margin-right: 14px;
+          font-size: 20px;
+          color: var(--text-color);
+        }
+        .link {
+          font-size: 16px;
+          color: var(--text-color);
+          font-weight: 400;
+        }
+      }
+    }
+    .mode {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      border-radius: 6px;
+      background-color: var(--primary-color-light);
+      position: relative;
+      transition: var(--tran-05);
+      list-style: none;
+  
+      .text {
+        color: var(--text-color);
+        transition: var(--tran-03);
+      }
+      .sun-moon {
+        height: 50px;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        i {
+          position: absolute;
+          color: var(--text-color);
+          transition: var(--tran-03);
+  
+          &.sun {
+            opacity: 0;
+          }
+        }
+      }
+      .toggle-switch {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        min-width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+  
+      .toggle-switch .switch {
+        position: relative;
+        height: 22px;
+        width: 40px;
+        border-radius: 25px;
+        background-color: #084371;
+        transition: var(--tran-05);
+      }
+  
+      .switch::before {
+        content: "";
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        background-color: white;
+        transition: var(--tran-04);
+      }
+    }
+  }
+  
+  .overlay {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      height: 1000vh;
+      width: 200%;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s ease;
+      background: rgba(0, 0, 0, 0.3);
+  }
+  
+  body.dark {
+    .mode {
+      .sun-moon i {
+        &.sun {
+          opacity: 1;
+        }
+  
+        &.moon {
+          opacity: 0;
+        }
+      }
+    }
+    .switch {   
+      &::before {
+        left: 20px !important;
+      }
+    }
+  }
