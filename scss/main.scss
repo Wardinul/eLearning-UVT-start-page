@@ -55,6 +55,7 @@ nav {
     left: 0;
     height: 70px;
     width: 100%;
+    border-bottom: 3px solid $primary-color;
     display: flex;
     align-items: center;
     background: $navbar-color;
@@ -112,101 +113,101 @@ nav.open {
 }
 .sidebar-content {
     .list {
-    list-style: none;
-    
-    .nav-link {
-    display: flex;
-    align-items: center;
-    margin: 8px 0;
-    padding: 14px 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: $tran-02;
-    &:hover {
-        background-color: $primary-color;
-        .icon {
-        color: #fff;
-        }
-        .link {
-        color: #fff;
-        }
-    }
-
-    .icon {
-        margin-right: 14px;
-        font-size: 20px;
-        color: $text-color;
-    }
-    .link {
-        font-size: 16px;
-        color: $text-color;
-        font-weight: 400;
-    }
-}
-}
-    .mode {
+        list-style: none;
+        
+        .nav-link {
         display: flex;
         align-items: center;
-        margin-top: 10px;
-        border-radius: 6px;
-        background-color: $primary-color;
-        position: relative;
-        transition: $tran-05;
-        list-style: none;
+        margin: 8px 0;
+        padding: 14px 12px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: $tran-02;
+        &:hover {
+            background-color: $primary-color;
+            .icon {
+            color: #fff;
+            }
+            .link {
+            color: #fff;
+            }
+        }
 
-        .text {
+        .icon {
+            margin-right: 14px;
+            font-size: 20px;
+            color: $text-color;
+        }
+        .link {
+            font-size: 16px;
+            color: $text-color;
+            font-weight: 400;
+        }
+    }
+}
+.mode {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 6px;
+    background-color: $primary-color;
+    position: relative;
+    transition: $tran-05;
+    list-style: none;
+
+    .text {
         color: $text-color;
         transition: $tran-03;
-        }
-        .sun-moon {
+    }
+    .sun-moon {
         height: 50px;
         width: 45px;
         display: flex;
         align-items: center;
         justify-content: space-around;
         i {
-            position: absolute;
-            color: $text-color;
-            transition: $tran-03;
-
-            &.sun {
-            opacity: 0;
-            }
-        }
-        }
-        .toggle-switch {
         position: absolute;
-        right: 0;
-        height: 100%;
-        min-width: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 6px;
-        cursor: pointer;
-        }
+        color: $text-color;
+        transition: $tran-03;
 
-        .toggle-switch .switch {
-        position: relative;
-        height: 22px;
-        width: 40px;
-        border-radius: 25px;
-        background-color: $toggle-color;
-        transition: $tran-05;
+        &.sun {
+        opacity: 0;
         }
+    }
+}
+.toggle-switch {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
-        .switch::before {
-        content: "";
-        position: absolute;
-        height: 15px;
-        width: 15px;
-        border-radius: 50%;
-        top: 50%;
-        left: 5px;
-        transform: translateY(-50%);
-        background-color: $primary-color-dark;
-        transition: $tran-04;
-        }
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: $toggle-color;
+    transition: $tran-05;
+}
+
+    .switch::before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: $primary-color-dark;
+    transition: $tran-04;
+    }
     }
     }
     .navigation{
@@ -342,10 +343,10 @@ nav.open {
             .carousel-inner{
                 .carousel-item{
                     img{
-                        height: 40vh;
+                        height: 55vh;
                         object-fit:cover;
                         @media screen and (min-width: 768px) {
-                            height: 60vh;
+                            height: 70vh;
                         }
                         @media screen and (min-width:992px) {
                             height: 100vh;
@@ -386,7 +387,7 @@ nav.open {
 
                     .card{
                         background: none;
-                        background-image: url(/images/card-bg.jpeg);
+                        background-image: url(../images/card-bg.jpeg);
                         cursor: pointer;
                         background-size: cover;
                         background-repeat: no-repeat;
@@ -598,200 +599,3 @@ nav.open {
             }
         }
     }  
-    
-    //   nav {
-    //       position: fixed;
-    //       z-index: 9999;
-    //       top: 0;
-    //       left: 0;
-    //       height: 70px;
-    //       width: 100%;
-    //       display: flex;
-    //       align-items: center;
-    //       background: rgb(12,71,120);
-    //       background: linear-gradient(130deg, rgba(12,71,120,1) 0%, rgba(52,113,183,1) 88%, rgba(52,113,183,1) 100%);
-    //       box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-    //       border-bottom: 2px solid #1C98D3;
-    //       color: white;
-    //       .logo {
-    //           display: flex;
-    //           align-items: center;
-    //           margin: 0 24px;
-    //       }
-    //       .sidebar {
-    //           position: fixed;
-    //           top: 0;
-    //           left: -100%;
-    //           height: 100%;
-    //           width: 260px;
-    //           padding: 20px 0;
-    //           background-color: #3471B7;
-    //         // background-color: #0E497B;
-    //           box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
-    //           transition: all 0.4s ease;
-    //       }
-    //   }
-    //   .logo {
-    //       .menu-icon {
-    //           color: $text-color;
-    //           font-size: 24px;
-    //           margin-right: 14px;
-    //           cursor: pointer;
-    //       }
-    //       .logo-name {
-    //           color: $text-color;
-    //           font-size: 22px;
-    //           font-weight: 500;
-    //       }
-    //   }
-    //   nav.open {
-    //       .sidebar {
-    //           left: 0;
-    //       }
-    //       ~ {
-    //           .overlay {
-    //               opacity: 1;
-    //               left: 260px;
-    //               pointer-events: auto;
-    //           }
-    //       }
-    //   }
-    //   .sidebar {
-    //       .sidebar-content {
-    //           display: flex;
-    //           height: 100%;
-    //           flex-direction: column;
-    //           justify-content: space-between;
-    //           padding: 30px 16px;
-    //       }
-    //   }
-    //   .sidebar-content {
-    //       .list {
-    //       list-style: none;
-          
-    //           .nav-link {
-    //         display: flex;
-    //         align-items: center;
-    //         margin: 8px 0;
-    //         padding: 14px 12px;
-    //         border-radius: 8px;
-    //         text-decoration: none;
-    //         transition: $tran-02;
-    //         &:hover {
-    //           background-color: $primary-color;
-    //           .icon {
-    //             color: #fff;
-    //           }
-    //           .link {
-    //             color: #fff;
-    //           }
-    //         }
-      
-    //         .icon {
-    //           margin-right: 14px;
-    //           font-size: 20px;
-    //           color: $text-color;
-    //         }
-    //         .link {
-    //           font-size: 16px;
-    //           color: $text-color;
-    //           font-weight: 400;
-    //         }
-    //       }
-    //     }
-    //     .mode {
-    //       display: flex;
-    //       align-items: center;
-    //       margin-top: 10px;
-    //       border-radius: 6px;
-    //       background-color: $primary-color;
-    //       position: relative;
-    //       transition: $tran-05;
-    //       list-style: none;
-      
-    //       .text {
-    //         color: $text-color;
-    //         transition: $tran-03;
-    //       }
-    //       .sun-moon {
-    //         height: 50px;
-    //         width: 45px;
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: space-around;
-    //         i {
-    //           position: absolute;
-    //           color: $text-color;
-    //           transition: $tran-03;
-      
-    //           &.sun {
-    //             opacity: 0;
-    //           }
-    //         }
-    //       }
-    //       .toggle-switch {
-    //         position: absolute;
-    //         right: 0;
-    //         height: 100%;
-    //         min-width: 60px;
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: center;
-    //         border-radius: 6px;
-    //         cursor: pointer;
-    //       }
-      
-    //       .toggle-switch .switch {
-    //         position: relative;
-    //         height: 22px;
-    //         width: 40px;
-    //         border-radius: 25px;
-    //         background-color: #084371;
-    //         transition:$tran-05;
-    //       }
-      
-    //       .switch::before {
-    //         content: "";
-    //         position: absolute;
-    //         height: 15px;
-    //         width: 15px;
-    //         border-radius: 50%;
-    //         top: 50%;
-    //         left: 5px;
-    //         transform: translateY(-50%);
-    //         background-color: white;
-    //         transition: $tran-04;
-    //       }
-    //     }
-    //   }
-      
-    //   .overlay {
-    //       position: fixed;
-    //       top: 0;
-    //       left: -100%;
-    //       height: 1000vh;
-    //       width: 200%;
-    //       opacity: 0;
-    //       pointer-events: none;
-    //       transition: all 0.4s ease;
-    //       background: rgba(0, 0, 0, 0.3);
-    //   }
-      
-    //   body.dark {
-    //     .mode {
-    //       .sun-moon i {
-    //         &.sun {
-    //           opacity: 1;
-    //         }
-      
-    //         &.moon {
-    //           opacity: 0;
-    //         }
-    //       }
-    //     }
-    //     .switch {   
-    //       &::before {
-    //         left: 20px !important;
-    //       }
-    //     }
-    //   }
