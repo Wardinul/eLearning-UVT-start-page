@@ -24,3 +24,4 @@ if (body.classList.contains("dark")) {
   modeText.innerText = "Dark mode";
 }
 });
+
