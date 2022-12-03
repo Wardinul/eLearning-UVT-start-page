@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>eLearning UVT</title>
 
     <!-- Font Awesome Icons -->
 
@@ -31,11 +31,11 @@
     <!-- Remove 'open' class, this is just to show in Codepen thumbnail -->
     <main class="main">
 
-    <nav class="">
-        <div class="logo">
-            <i class="fa-solid fa-bars bx bx-menu menu-icon"></i>
+    <nav class="d-flex justify-content-between">
+        <div class="logo d-md-none">
+            <i class="fa-solid fa-bars bx bx-menu menu-icon d-md-none"></i>
         </div>
-        <div class="sidebar">
+        <div class="sidebar d-md-none">
             <div class="logo">
                 <i class="fa-solid fa-x bx bx-menu menu-icon"></i>
                 <img src="/images/uvt logo.png" alt="uvt logo">
@@ -46,37 +46,31 @@
                     <li class="list">
                         <a href="#" class="nav-link">
                         <i class="bx bx-home-alt icon"></i>
-                        <span class="link">Dashboard</span>
+                        <span class="link">Acasă</span>
                         </a>
                     </li>
                     <li class="list">
                         <a href="#" class="nav-link">
                         <i class="bx bx-bell icon"></i>
-                        <span class="link">Notifications</span>
+                        <span class="link">Calendar</span>
                         </a>
                     </li>
                     <li class="list">
                         <a href="#" class="nav-link">
                         <i class="bx bx-message-rounded icon"></i>
-                        <span class="link">Messages</span>
+                        <span class="link">Informații</span>
                         </a>
                     </li>
                     <li class="list">
                         <a href="#" class="nav-link">
                         <i class="bx bx-pie-chart-alt-2 icon"></i>
-                        <span class="link">Analytics</span>
+                        <span class="link">Ghiduri</span>
                         </a>
                     </li>
                     <li class="list">
                         <a href="#" class="nav-link">
                         <i class="bx bx-heart icon"></i>
-                        <span class="link">Likes</span>
-                        </a>
-                    </li>
-                    <li class="list">
-                        <a href="#" class="nav-link">
-                        <i class="bx bx-folder-open icon"></i>
-                        <span class="link">Files</span>
+                        <span class="link">Contact</span>
                         </a>
                     </li>
                 </ul>
@@ -84,19 +78,11 @@
                 <div class="bottom-content">
                     <li class="list">
                         <a href="#" class="nav-link">
-                        <i class="bx bx-cog icon"></i>
-                        <span class="link">Settings</span>
-                        </a>
-                    </li>
-                    <li class="list">
-                        <a href="#" class="nav-link">
-                        <i class="bx bx-log-out icon"></i>
-                        <span class="link">Logout</span>
+                        <span class="link">Login</span>
                         </a>
                     </li>
                     <li class="mode">
                         <div class="sun-moon">
-                        <!-- <i class='bx bx-moon icon moon'></i> -->
                         <i class="fa-regular fa-moon bx bx-moon icon moon"></i>
                         <i class='bx bx-sun icon sun fa-regular fa-sun'></i>
                         </div>
@@ -109,9 +95,40 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="navigation d-none d-md-flex align-items-center">
+
+          <div class="logo">
+            <img src="/images/uvt logo.png" alt="uvt logo">
+          </div>
+
+          <a href="#" class="nav-link">Acasă</a>
+          <a href="#" class="nav-link">Calendar</a>
+          <div class="dropdown">
+            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Informatii
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+
+          <a href="#" class="nav-link">Ghiduri</a>
+          <a href="#" class="nav-link">Contact</a>
+
+
+        </div>
+
+
+        <button class="connect-btn"><span>Conectare</span></button>
+        
+
     </nav>
 
-    <section class="overlay"></section>
+    <section class="overlay d-md-none"></section>
 
     <!-- Carousel -->
 
@@ -140,11 +157,6 @@
             <div class="carousel-caption d-none d-md-block">
             </div>
           </div>
-          <!-- <div class="carousel-item" data-bs-interval="2500">
-            <img src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-          </div> -->
         </div>
         <a class="carousel-control-prev" style="height:100%" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
