@@ -28,8 +28,88 @@
     <main class="main">
 
         <!-- Navbar -->
+
+        <nav class="">
+          <div class="logo">
+            <i class="fa-solid fa-bars bx bx-menu menu-icon"></i>
+          </div>
+          <div class="sidebar">
+            <div class="logo">
+              <i class="fa-solid fa-x bx bx-menu menu-icon"></i>
+              <span class="logo-name">Codepen</span>
+            </div>
         
-      <nav class="navbar navbar-dark navbar-expand-lg">
+            <div class="sidebar-content">
+              <ul class="lists">
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-home-alt icon"></i>
+                    <span class="link">Dashboard</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-bell icon"></i>
+                    <span class="link">Notifications</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-message-rounded icon"></i>
+                    <span class="link">Messages</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-pie-chart-alt-2 icon"></i>
+                    <span class="link">Analytics</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-heart icon"></i>
+                    <span class="link">Likes</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-folder-open icon"></i>
+                    <span class="link">Files</span>
+                  </a>
+                </li>
+              </ul>
+        
+              <div class="bottom-content">
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-cog icon"></i>
+                    <span class="link">Settings</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-log-out icon"></i>
+                    <span class="link">Logout</span>
+                  </a>
+                </li>
+                <li class="mode">
+                  <div class="sun-moon">
+                    <!-- <i class='bx bx-moon icon moon'></i> -->
+                    <i class="fa-regular fa-moon bx bx-moon icon moon"></i>
+                    <i class='bx bx-sun icon sun'></i>
+                  </div>
+                  <span class="mode-text text">Dark mode</span>
+        
+                  <div class="toggle-switch">
+                    <span class="switch"></span>
+                  </div>
+                </li>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+      <!-- <nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -68,43 +148,6 @@
               </ul>
             </div>
             <a class="navbar__connect-btn" href="#"><span>Conectare</span></a>
-        </div>
-      </nav>
-
-      <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
         </div>
       </nav> -->
 
@@ -254,47 +297,6 @@
                 </div>
               </div>
 
-            <!-- <div class="instruments__container d-flex col-12 row justify-content-center">
-              <div class="instruments__container__item col-12 col-sm-5">
-                <i class="instruments__container__item__icon icon fa-solid fa-person-chalkboard"></i>
-                <p class="instruments__container__item__text">Platforma eLearning</p>
-              </div>
-
-              <div class="instruments__container__item col-12 col-sm-5">
-                <i class="instruments__container__item__icon icon fa-solid fa-mobile-screen-button"></i>
-                <p class="instruments__container__item__text">Branded Mobile app</p>
-              </div>
-
-              <div class="instruments__container__item col-12 col-sm-5">
-                <i class="instruments__container__item__icon icon fa-solid fa-globe"></i>
-                <p class="instruments__container__item__text">WebEx</p>
-              </div>
-
-              <div class="instruments__container__item col-12 col-sm-5">
-                <i class="instruments__container__item__icon icon fa-sharp fa-solid fa-file-pen"></i>
-                <p class="instruments__container__item__text">TurnItIn</p>
-              </div>
-
-              <div class="instruments__container__item col-12 col-sm-5 col-lg-4">
-                <i class="instruments__container__item__icon icon fa-solid fa-users-rectangle"></i>
-                <p class="instruments__container__item__text">MS Teams</p>
-              </div>
-
-              <div class="instruments__container__item col-12 col-sm-5 col-lg-4">
-                <i class="instruments__container__item__icon icon fa-solid fa-calculator"></i>
-                <p class="instruments__container__item__text">Wiris</p>
-              </div>
-
-              <div class="instruments__container__item col-12 col-sm-5 col-lg-6">
-                <i class="instruments__container__item__icon icon fa-sharp fa-solid fa-video"></i>
-                <p class="instruments__container__item__text">Google Meet</p>
-              </div>
-
-              <div class="instruments__container__item col-12 col-sm-5 col-lg-6">
-                <i class="instruments__container__item__icon icon fa-brands fa-square-youtube"></i>
-                <p class="instruments__container__item__text">Annoto</p>
-              </div> -->
-            <!-- </div> -->
           </section>
 
           <footer class="footer px-1 px-lg-5">
@@ -363,6 +365,35 @@
           </footer>
 
     </main>
+
+    <script>
+      const body = document.querySelector("body"),
+    navBar = document.querySelector("nav"),
+    menuBtns = document.querySelectorAll(".menu-icon"),
+    overlay = document.querySelector(".overlay"),
+    modeSwitch = body.querySelector(".toggle-switch"),
+    modeText = body.querySelector(".mode-text");
+  
+  menuBtns.forEach((menuBtn) => {
+    menuBtn.addEventListener("click", () => {
+      navBar.classList.toggle("open");
+    });
+  });
+  
+  overlay.addEventListener("click", () => {
+    navBar.classList.remove("open");
+  });
+  
+  modeSwitch.addEventListener("click", () => {
+    body.classList.toggle("dark");
+  
+    if (body.classList.contains("dark")) {
+      modeText.innerText = "Light mode";
+    } else {
+      modeText.innerText = "Dark mode";
+    }
+  });
+    </script>
 
 </body>
 </html>
