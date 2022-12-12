@@ -48,6 +48,64 @@ nav {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease;
 }
+nav .desktop-navigation a,
+nav .desktop-navigation button {
+  color: white;
+  margin: 0 0.8rem;
+  padding: 0.3rem 0.5rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+nav .desktop-navigation a:hover, nav .desktop-navigation a:focus,
+nav .desktop-navigation button:hover,
+nav .desktop-navigation button:focus {
+  background-color: #5990cf;
+  color: white;
+}
+nav .desktop-navigation .dropdown-menu {
+  position: relative;
+  background-color: #3471B7;
+  padding: 1rem;
+  border-radius: 0;
+}
+nav .desktop-navigation .dropdown-menu li a {
+  max-width: 100%;
+  margin: 0;
+}
+nav .connect-btn {
+  outline: none;
+  border-radius: 4px;
+  background-color: #5990cf;
+  padding: 0.5rem;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+nav .connect-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+nav .connect-btn span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+nav .connect-btn:hover span, nav .connect-btn:focus span {
+  padding-right: 25px;
+}
+nav .connect-btn:hover span:after, nav .connect-btn:focus span:after {
+  opacity: 1;
+  right: 0;
+}
 nav .logo {
   display: flex;
   align-items: center;
@@ -91,11 +149,10 @@ nav.open ~ .overlay {
   justify-content: space-between;
   padding: 30px 16px;
 }
-
-.sidebar-content .list {
+.sidebar .sidebar-content .list {
   list-style: none;
 }
-.sidebar-content .list .nav-link {
+.sidebar .sidebar-content .list .nav-link {
   display: flex;
   align-items: center;
   margin: 8px 0;
@@ -104,26 +161,27 @@ nav.open ~ .overlay {
   text-decoration: none;
   transition: all 0.2s ease;
 }
-.sidebar-content .list .nav-link:hover {
+.sidebar .sidebar-content .list .nav-link:hover {
   background-color: #5990cf;
 }
-.sidebar-content .list .nav-link:hover .icon {
+.sidebar .sidebar-content .list .nav-link:hover .icon {
   color: #fff;
 }
-.sidebar-content .list .nav-link:hover .link {
+.sidebar .sidebar-content .list .nav-link:hover .link {
   color: #fff;
 }
-.sidebar-content .list .nav-link .icon {
+.sidebar .sidebar-content .list .nav-link .icon {
   margin-right: 14px;
   font-size: 20px;
   color: #FFFFFF;
 }
-.sidebar-content .list .nav-link .link {
+.sidebar .sidebar-content .list .nav-link .link {
   font-size: 16px;
   color: #FFFFFF;
   font-weight: 400;
 }
-.sidebar-content .mode {
+
+.mode {
   display: flex;
   align-items: center;
   margin-top: 10px;
@@ -133,26 +191,27 @@ nav.open ~ .overlay {
   transition: all 0.5s ease;
   list-style: none;
 }
-.sidebar-content .mode .text {
+.mode .text {
   color: #FFFFFF;
   transition: all 0.3s ease;
 }
-.sidebar-content .mode .sun-moon {
+.mode .sun-moon {
   height: 50px;
   width: 45px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.sidebar-content .mode .sun-moon i {
+.mode .sun-moon i {
   position: absolute;
   color: #FFFFFF;
   transition: all 0.3s ease;
 }
-.sidebar-content .mode .sun-moon i.sun {
+.mode .sun-moon i.sun {
   opacity: 0;
 }
-.sidebar-content .mode .toggle-switch {
+
+.toggle-switch {
   position: absolute;
   right: 0;
   height: 100%;
@@ -163,7 +222,7 @@ nav.open ~ .overlay {
   border-radius: 6px;
   cursor: pointer;
 }
-.sidebar-content .mode .toggle-switch .switch {
+.toggle-switch .switch {
   position: relative;
   height: 22px;
   width: 40px;
@@ -171,7 +230,7 @@ nav.open ~ .overlay {
   background-color: #ddd;
   transition: all 0.5s ease;
 }
-.sidebar-content .mode .switch::before {
+.toggle-switch .switch::before {
   content: "";
   position: absolute;
   height: 15px;
@@ -182,66 +241,6 @@ nav.open ~ .overlay {
   transform: translateY(-50%);
   background-color: rgba(28, 81, 141, 0.8588235294);
   transition: all 0.4s ease;
-}
-
-.navigation a,
-.navigation button {
-  color: white;
-  margin: 0 0.8rem;
-  padding: 0.3rem 0.5rem;
-  background: none;
-  border: none;
-  outline: none;
-}
-.navigation a:hover, .navigation a:focus,
-.navigation button:hover,
-.navigation button:focus {
-  background-color: #5990cf;
-  color: white;
-}
-.navigation .dropdown-menu {
-  position: relative;
-  background-color: #3471B7;
-  padding: 1rem;
-  border-radius: 0;
-}
-.navigation .dropdown-menu li a {
-  max-width: 100%;
-  margin: 0;
-}
-
-.connect-btn {
-  outline: none;
-  border-radius: 4px;
-  background-color: #5990cf;
-  padding: 0.5rem;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 0 1rem;
-}
-.connect-btn span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-.connect-btn span:after {
-  content: "»";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -10px;
-  transition: 0.5s;
-}
-.connect-btn:hover span, .connect-btn:focus span {
-  padding-right: 25px;
-}
-.connect-btn:hover span:after, .connect-btn:focus span:after {
-  opacity: 1;
-  right: 0;
 }
 
 .overlay {

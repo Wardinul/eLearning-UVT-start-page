@@ -1,5 +1,253 @@
-@mixin navbar-bg {
-    background: rgb(12,71,120);
-    background: linear-gradient(130deg, rgba(12,71,120,1) 0%, rgba(52,113,183,1) 88%, rgba(52,113,183,1) 100%);
+// NAVBAR 
+
+@mixin navbar-styles {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    border-bottom: 3px solid $primary-color;
+    display: flex;
+    align-items: center;
+    background: $navbar-color;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    transition: $tran-05;
+
+    .desktop-navigation{
+        a,
+        button{
+            color: white;
+            margin: 0 .8rem;
+            padding: .3rem .5rem;
+            background: none;
+            border: none;
+            outline: none;
+            &:hover,
+            &:focus{
+                background-color: $primary-color;
+                color: white;
+            }
+        }
+        .dropdown-menu{
+            position: relative;
+            background-color: $sidebar-color;
+            padding: 1rem;
+            border-radius: 0;
+            li{
+                a{
+                    max-width:100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .connect-btn {
+        outline: none;
+        border-radius: 4px;
+        background-color: $primary-color;
+        padding: .5rem;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 0 1rem;
+        span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            &:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -10px;
+                transition: 0.5s;
+            }
+        }
+        &:hover,
+        &:focus {
+            span {
+                padding-right: 25px;
+                &:after {
+                    opacity: 1;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+// SIDEBAR
+
+@mixin sidebar-styles {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 260px;
+    padding: 20px 0;
+    background: $sidebar-color;
+    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+// SIDEBAR CONTENT
+
+@mixin sidebar-content-styles {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+
+        .list {
+        list-style: none;
+        
+        .nav-link {
+            @include nav-link-styles;
+
+        &:hover {
+            background-color: $primary-color;
+            .icon {
+            color: #fff;
+            }
+            .link {
+            color: #fff;
+            }
+        }
+
+        .icon {
+            margin-right: 14px;
+            font-size: 20px;
+            color: $text-color;
+        }
+        .link {
+            font-size: 16px;
+            color: $text-color;
+            font-weight: 400;
+        }
+    }
+}
+}
+
+// NAV LINK 
+
+@mixin nav-link-styles {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    padding: 14px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: $tran-02;
+}
+
+// DARK MODE
+
+@mixin mode-switch-styles{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 6px;
+    background-color: $primary-color;
+    position: relative;
+    transition: $tran-05;
+    list-style: none;
+    .text {
+        color: $text-color;
+        transition: $tran-03;
+    }
+    .sun-moon{
+        height: 50px;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+            i {
+            position: absolute;
+            color: $text-color;
+            transition: $tran-03;
+
+            &.sun {
+            opacity: 0;
+            }
+        }
+    }
+}
+
+@mixin mode-toggle-styles{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+
+    .switch {
+        position: relative;
+        height: 22px;
+        width: 40px;
+        border-radius: 25px;
+        background-color: $toggle-color;
+        transition: $tran-05;
+
+        &::before{
+            content: "";
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            background-color: $primary-color-dark;
+            transition: $tran-04;
+        }
+    }
+}
+
+@mixin dark-mode {
+    background: $body-color-dark;
+    .sidebar{
+        background: $sidebar-color-dark;
+    }
+    .main{
+        color: white;
+        background-color: $body-color-dark;
+        .instruments__container__item{
+            &:hover{
+                .instruments__container__item__card{
+                    background-color: $primary-color;
+                    .icon,
+                    p{
+                        color: white;
+                    }
+                }
+            }
+        }
+        .icon,
+        p{
+            color: white;
+        }
+    }
+}
+
+// OVERLAY 
+
+@mixin overlay-styles{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 1000vh;
+    width: 200%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    background: rgba(0, 0, 0, 0.3);
 }
