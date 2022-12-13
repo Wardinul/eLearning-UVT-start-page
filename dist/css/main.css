@@ -12,28 +12,6 @@ html {
   transition: all 0.5s ease;
 }
 
-.dark {
-  background: #0E497B;
-}
-.dark .sidebar {
-  background: #0E497B;
-}
-.dark .main {
-  color: white;
-  background-color: #0E497B;
-}
-.dark .main .instruments__container__item:hover .instruments__container__item__card {
-  background-color: #5990cf;
-}
-.dark .main .instruments__container__item:hover .instruments__container__item__card .icon,
-.dark .main .instruments__container__item:hover .instruments__container__item__card p {
-  color: white;
-}
-.dark .main .icon,
-.dark .main p {
-  color: white;
-}
-
 nav {
   position: fixed;
   z-index: 999;
@@ -178,6 +156,28 @@ nav.open ~ .overlay {
   font-size: 16px;
   color: #FFFFFF;
   font-weight: 400;
+}
+
+.dark {
+  background: #0E497B;
+}
+.dark .sidebar {
+  background: #0E497B;
+}
+.dark .main {
+  color: white;
+  background-color: #0E497B;
+}
+.dark .main .instruments__container__item:hover .instruments__container__item__card {
+  background-color: #5990cf;
+}
+.dark .main .instruments__container__item:hover .instruments__container__item__card .icon,
+.dark .main .instruments__container__item:hover .instruments__container__item__card p {
+  color: white;
+}
+.dark .main .icon,
+.dark .main p {
+  color: white;
 }
 
 .mode {
