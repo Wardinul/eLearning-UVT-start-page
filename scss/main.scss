@@ -23,24 +23,11 @@ html{
 nav {
     @include navbar-styles;
 
-    .logo {
-        display: flex;
-        align-items: center;
-        margin: 0 24px;
-
-        img{
-            width: 160px;
-        }
-    }
-    
 // MOBILE NAVIGATION
 
     .sidebar {
         @include sidebar-styles;
     }
-}
-
-.logo {
     .menu-icon {
         color: $text-color;
         font-size: 24px;
@@ -65,328 +52,373 @@ nav.open {
 }
 .sidebar {
     .sidebar-content {
-        @include sidebar-content-styles;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 16px;
+
+            .list {
+            list-style: none;
+            
+                .nav-link {
+                    @include nav-link-styles;
+
+                &:hover {
+                    background-color: $primary-color;
+                    .icon {
+                    color: #fff;
+                    }
+                    .link {
+                    color: #fff;
+                    }
+                }
+
+                .icon {
+                    margin-right: 14px;
+                    font-size: 20px;
+                    color: $text-color;
+                }
+                .link {
+                    font-size: 16px;
+                    color: $text-color;
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
+
+// Dark Mode Styles
+
 .mode {
     @include mode-switch-styles;
 }
 .toggle-switch {
     @include mode-toggle-styles;
 }    
-
 .overlay {
     @include overlay-styles;
 }
 
-    body.dark {
-    .mode {
-        .sun-moon i {
-        &.sun {
-            opacity: 1;
-        }
-
-        &.moon {
-            opacity: 0;
-        }
-        }
-    }
-    .switch {   
-        &::before {
-        left: 20px !important;
-            }
-        }
+body.dark {
+.mode {
+    .sun-moon i {
+    &.sun {
+        opacity: 1;
     }
 
-    .main{
-        transition: $tran-05;
-        font-family: 'Roboto', sans-serif;
-        
-        .carousel{
-            .uvt{   
-                position: absolute;
-                z-index:1;
-                bottom:0px;
-                margin-bottom: 1rem;
-                left:20px;
-                width:50%;
-                @media screen and (min-width:768px) {
-                    bottom: 20px;
-                }
-                
-                &__logo{
-                    background-color: rgb(255, 255, 255);
-                    border-radius: 50%;
-    
-                    img{
-                        width: 80px;
-                        height: 80px;
-                    }
-                }
-                &__quote{
-                    display: flex;
-                    align-items: center;
-                    color: white;
-                    margin-left: 20px;
-                    font-size: clamp(1.4rem, 2.4vw, 3rem); 
-                }
-            }
-            .carousel-inner{
-                .carousel-item{
-                    img{
-                        height: 55vh;
-                        object-fit:cover;
-                        @media screen and (min-width: 768px) {
-                            height: 70vh;
-                        }
-                        @media screen and (min-width:992px) {
-                            height: 100vh;
-                        }
-                    }
-                }
-            }
+    &.moon {
+        opacity: 0;
+    }
+    }
+}
+.switch {   
+    &::before {
+    left: 20px !important;
         }
-    
-        .benefit{
-            &__header{
-                padding-top: 2rem;
-                text-align: center;
-                h1,
-                h2{
-                    font-weight: bold;
-                }
-            }
-            &__title{
-                font-size: 23px;
-                @media screen and (min-width:992px) {
-                    font-size: 25px;
-                }
-            }
-            &__subtitle{
-                font-size: 15px;
-                @media screen and (min-width:992px) {
-                    font-size: 18px;
-                }
-            }
-            &__container{
-                margin: 1rem;
-                &__item{
-                    display: flex;
-                    justify-content: center;
-                    margin: 1.5rem 0;
-                    outline: none;
+    }
+}
 
-                    .card{
-                        background: none;
-                        background-image: url(card-bg.jpeg);
-                        cursor: pointer;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        color: white;
-                        padding: 1rem 2.5rem;
-                        min-width: 450px;
-                        width: 450px;
-                        transition: .3s;
-                        &:hover{
-                            -ms-transform: scale(1.1); /* IE 9 */
-                            -webkit-transform: scale(1.1); /* Safari 3-8 */
-                            transform: scale(1.1); 
-                        }
-                        @media screen  and (max-width: 500px) {
-                            max-width: 100%;
-                            width: 100%;
-                            min-width: 0;
-                        }
-                        @media screen and (min-width:1200px) {
-                            max-width: 100%;
-                            min-width: 370px;
-                            }
-                        &__icon{
-                            text-align: center;
-                            font-size: 50px;
-                            color: #FBB900;
-                            margin: 2rem 0;
-                        }
-                        &__title{
-                            text-align: center;
-                            font-weight: bold;
-                        }
+// MAIN CONTENT
+
+.main{
+    transition: $tran-05;
+    font-family: 'Roboto', sans-serif;
+    
+    // Carousel Styles
+
+    .carousel{
+        .uvt{   
+            position: absolute;
+            z-index:1;
+            bottom:0px;
+            margin-bottom: 1rem;
+            left:20px;
+            width:50%;
+            @media screen and (min-width:768px) {
+                bottom: 20px;
+            }
+            
+            &__logo{
+                background-color: rgb(255, 255, 255);
+                border-radius: 50%;
+
+                img{
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+            &__quote{
+                display: flex;
+                align-items: center;
+                color: white;
+                margin-left: 20px;
+                font-size: clamp(1.4rem, 2.4vw, 3rem); 
+            }
+        }
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    height: 55vh;
+                    object-fit:cover;
+                    @media screen and (min-width: 768px) {
+                        height: 70vh;
+                    }
+                    @media screen and (min-width:992px) {
+                        height: 100vh;
                     }
                 }
             }
         }
-    
-        .instruments{
-            @media screen and (min-width:992px) {
-                padding: 0 10rem;
-            }
-            &__title{
+    }
+
+// Benefits Section Styles
+
+    .benefit{
+        &__header{
+            padding-top: 2rem;
+            text-align: center;
+            h1,
+            h2{
                 font-weight: bold;
-                font-size: 23px;
-                text-align: center;
-                @media screen and (min-width:992px) {
-                    font-size: 25px;
-                }
             }
-            &__subtitle{
-                font-size: 15px;
-                text-align: center;
-                padding: 0 1rem;
+        }
+        &__title{
+            font-size: 23px;
+            @media screen and (min-width:992px) {
+                font-size: 25px;
             }
-            &__container{
-                margin: 0 3rem;
-                @media screen and (min-width:992px) {
-                    margin: 0 7.5rem;
-                }
-                padding-bottom: 6rem;
-                padding-top: .5rem;
-                &__item{
-                    display: flex;
-                    justify-content: center;
-                    position: relative;
-                    text-align: center;
+        }
+        &__subtitle{
+            font-size: 15px;
+            @media screen and (min-width:992px) {
+                font-size: 18px;
+            }
+        }
+        &__container{
+            margin: 1rem;
+            &__item{
+                display: flex;
+                justify-content: center;
+                margin: 1.5rem 0;
+                outline: none;
+
+                .card{
+                    background: none;
+                    background-image: url(card-bg.jpeg);
                     cursor: pointer;
-                    height: 185px;
-                    color: #084371;
-                    border-radius: 15px;
-                    margin: 2rem 0;
-                    transition: .7s;
-                    &__card{
-                        position: relative;
-                        height: 150px;
-                        width: 350px;
-                        padding: 0 1rem;
-                        border-radius: 10px;
-                        bottom: -2rem;
-                        transition: position 0.5s, bottom 0.5s;
-                        transition: 1s;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    color: white;
+                    padding: 1rem 2.5rem;
+                    min-width: 450px;
+                    width: 450px;
+                    transition: .3s;
+                    &:hover{
+                        -ms-transform: scale(1.1); /* IE 9 */
+                        -webkit-transform: scale(1.1); /* Safari 3-8 */
+                        transform: scale(1.1); 
                     }
-                    &__icon,
-                    p{
-                        position: relative;
-                        bottom: -3rem;
-                        transition: position 0.5s, bottom 0.5s;
-                        transition: 1s;
+                    @media screen  and (max-width: 500px) {
+                        max-width: 100%;
+                        width: 100%;
+                        min-width: 0;
                     }
-                    &:hover {
-                        font-size: 17px;
-                        .instruments__container__item__card{
-                            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-                            bottom: 1.2rem;
+                    @media screen and (min-width:1200px) {
+                        max-width: 100%;
+                        min-width: 370px;
                         }
-                        .icon,
-                        p{
-                            bottom: -1.5rem;
-                            color: #3471B7;
-                        }
-                    }
                     &__icon{
+                        text-align: center;
                         font-size: 50px;
-                        color: #084371;
+                        color: #FBB900;
+                        margin: 2rem 0;
+                    }
+                    &__title{
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    // Instruments Section Styles
+
+    .instruments{
+        @media screen and (min-width:992px) {
+            padding: 0 10rem;
+        }
+        &__title{
+            font-weight: bold;
+            font-size: 23px;
+            text-align: center;
+            @media screen and (min-width:992px) {
+                font-size: 25px;
+            }
+        }
+        &__subtitle{
+            font-size: 15px;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        &__container{
+            margin: 0 3rem;
+            @media screen and (min-width:992px) {
+                margin: 0 7.5rem;
+            }
+            padding-bottom: 6rem;
+            padding-top: .5rem;
+            &__item{
+                display: flex;
+                justify-content: center;
+                position: relative;
+                text-align: center;
+                cursor: pointer;
+                height: 185px;
+                color: #084371;
+                border-radius: 15px;
+                margin: 2rem 0;
+                transition: .7s;
+                &__card{
+                    position: relative;
+                    height: 150px;
+                    width: 350px;
+                    padding: 0 1rem;
+                    border-radius: 10px;
+                    bottom: -2rem;
+                    transition: position 0.5s, bottom 0.5s;
+                    transition: 1s;
+                }
+                &__icon,
+                p{
+                    position: relative;
+                    bottom: -3rem;
+                    transition: position 0.5s, bottom 0.5s;
+                    transition: 1s;
+                }
+                &:hover {
+                    font-size: 17px;
+                    .instruments__container__item__card{
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+                        bottom: 1.2rem;
+                    }
+                    .icon,
+                    p{
+                        bottom: -1.5rem;
+                        color: #3471B7;
+                    }
+                }
+                &__icon{
+                    font-size: 50px;
+                    color: #084371;
+                    transition: .5s;
+                }
+                &__text{
+                    margin: .7rem 0 0 0;
+                }
+            }
+        }
+    }
+
+    // Footer Styles
+
+    .footer{
+        background-color: #084371;
+        color: white;
+        padding-top: 2rem;
+        &__container{
+            > div{
+                margin-bottom: 1.5rem;
+            }
+            &__title{
+                font-size: 18px;
+                font-weight: bold;
+            }
+            &__address{
+                address{
+                    max-width: 250px;
+                }
+            }
+            &__download{
+                img{
+                    max-width: 150px;
+                    margin: .5rem 0;
+                    @media screen and (min-width:1200px) {
+                        &:nth-of-type(2){
+                            margin: 0 1rem;
+                        }
+                    }
+                }
+            }
+            &__terms{
+                &__link{
+                    text-decoration: none;
+                    color: white;
+                    outline: none;
+                    &:hover,
+                    &:focus{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            &__status{
+                a {
+                    position: relative;
+                    z-index: 1;
+                    color: white;
+                    outline: none;
+                    text-decoration: none;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        width: 0;
+                        left: -3px;
+                        height: 25px;
+                        background-color: #3471B7;
                         transition: .5s;
                     }
-                    &__text{
-                        margin: .7rem 0 0 0;
-                    }
-                }
-            }
-        }
-    
-        .footer{
-            background-color: #084371;
-            color: white;
-            padding-top: 2rem;
-            &__container{
-                > div{
-                    margin-bottom: 1.5rem;
-                }
-                &__title{
-                    font-size: 18px;
-                    font-weight: bold;
-                }
-                &__address{
-                    address{
-                        max-width: 250px;
-                    }
-                }
-                &__download{
-                    img{
-                        max-width: 150px;
-                        margin: .5rem 0;
-                        @media screen and (min-width:1200px) {
-                            &:nth-of-type(2){
-                                margin: 0 1rem;
-                            }
-                        }
-                    }
-                }
-                &__terms{
-                    &__link{
-                        text-decoration: none;
-                        color: white;
-                        outline: none;
-                        &:hover,
-                        &:focus{
-                            text-decoration: underline;
-                        }
-                    }
-                }
-                &__status{
-                    a {
-                        position: relative;
-                        z-index: 1;
-                        color: white;
-                        outline: none;
-                        text-decoration: none;
+                    &:hover,
+                    &:focus {
                         &::before {
-                            content: '';
-                            position: absolute;
-                            z-index: -1;
-                            width: 0;
-                            left: -3px;
-                            height: 25px;
-                            background-color: #3471B7;
-                            transition: .5s;
-                        }
-                        &:hover,
-                        &:focus {
-                            &::before {
-                                width: 110%;
-                            }
+                            width: 110%;
                         }
                     }
                 }
-                &__logo{
-                    img{
-                        max-width: 200px;
-                    }
+            }
+            &__logo{
+                img{
+                    max-width: 200px;
                 }
-                &__copyright{
-                    img{
-                        max-width: 100px;
-                    }
+            }
+            &__copyright{
+                img{
+                    max-width: 100px;
                 }
-                &__social{
-                    a{
+            }
+            &__social{
+                a{
+                    position: relative;
+                    outline: none;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 21px;
+                    margin: 0 .5rem;
+                    i{
                         position: relative;
-                        outline: none;
-                        text-decoration: none;
-                        color: white;
-                        font-size: 21px;
-                        margin: 0 .5rem;
+                        bottom: 0;
+                        transition: bottom .3s;
+                    }
+                    &:hover,
+                    &:focus{
                         i{
-                            position: relative;
-                            bottom: 0;
-                            transition: bottom .3s;
-                        }
-                        &:hover,
-                        &:focus{
-                            i{
-                                bottom: 1rem;
-                            }
+                            bottom: 1rem;
                         }
                     }
                 }
             }
         }
-    }  
+    }
+}  
