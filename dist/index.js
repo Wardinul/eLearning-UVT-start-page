@@ -25,7 +25,7 @@ if (body.classList.contains("dark")) {
 }
 });
 
-
+// Accordion Functionality
 
 var acc = document.getElementsByClassName('nav-accordion__title');
 var i;
