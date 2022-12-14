@@ -14,10 +14,6 @@ html{
     transition: $tran-05;
 }
 
-.dark{
-    @include dark-mode;
-}
-
 // NAVIGATION STYLES 
 
 nav {
@@ -58,64 +54,88 @@ nav.open {
         justify-content: space-between;
         padding: 30px 16px;
 
+        .lists{
+            padding: 0;
             .list {
-            list-style: none;
-            
-                .nav-link {
-                    @include nav-link-styles;
-
-                &:hover {
-                    background-color: $primary-color;
+                list-style: none;
+                
+                    .nav-link {
+                        @include nav-link-styles;
+    
+                    &:hover {
+                        background-color: $primary-color;
+                        .icon {
+                        color: #fff;
+                        }
+                        .link {
+                        color: #fff;
+                        }
+                    }
                     .icon {
-                    color: #fff;
+                        margin-right: 14px;
+                        font-size: 20px;
+                        color: $text-color;
                     }
                     .link {
-                    color: #fff;
+                        font-size: 16px;
+                        color: $text-color;
+                        font-weight: 400;
                     }
-                }
-
-                .icon {
-                    margin-right: 14px;
-                    font-size: 20px;
-                    color: $text-color;
-                }
-                .link {
-                    font-size: 16px;
-                    color: $text-color;
-                    font-weight: 400;
+                    
                 }
             }
         }
-    }
-}
 
-// Dark Mode Styles
+        // Navigation Accordion Button Styles
 
-.mode {
-    @include mode-switch-styles;
-}
-.toggle-switch {
-    @include mode-toggle-styles;
-}    
-.overlay {
-    @include overlay-styles;
-}
-
-body.dark {
-.mode {
-    .sun-moon i {
-    &.sun {
-        opacity: 1;
-    }
-
-    &.moon {
-        opacity: 0;
-    }
-    }
-}
-.switch {   
-    &::before {
-    left: 20px !important;
+        .nav-accordion {
+            display: block;
+            &__title{
+                @include nav-link-styles;
+        
+                &::after{
+                    content: '\002B';
+                    color: #fff;
+                    font-weight: normal;
+                    float: right;
+                    margin-left: auto;
+                    font-size: 24px;
+                    line-height: 1;
+                }
+            }
+            &__content{
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+        
+                &__inside{
+                    color: white;
+                    background-color: $primary-color;
+        
+                    .accordion-item{
+                        text-decoration: none;
+                        color: white;
+                        padding: .5rem .8rem;
+                        outline: none;
+                        // margin: .5rem 0;
+        
+                        &:hover,
+                        &:focus{
+                            background-color: $primary-color-dark;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .active,
+        .nav-accordion__title:hover {
+            background-color: $primary-color;
+            color: white;
+        }
+        .active:after {
+            content: "\2212";
         }
     }
 }
@@ -422,3 +442,37 @@ body.dark {
         }
     }
 }  
+
+// Dark Mode Styles
+
+.dark{
+    @include dark-mode;
+}
+.mode {
+    @include mode-switch-styles;
+}
+.toggle-switch {
+    @include mode-toggle-styles;
+}    
+.overlay {
+    @include overlay-styles;
+}
+
+body.dark {
+.mode {
+    .sun-moon i {
+        &.sun {
+            opacity: 1;
+        }
+
+        &.moon {
+            opacity: 0;
+        }
+    }
+}
+.switch {   
+    &::before {
+    left: 20px !important;
+        }
+    }
+}
