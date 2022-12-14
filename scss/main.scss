@@ -368,12 +368,14 @@ nav.open {
                 }
             }
             &__download{
-                img{
+                img,
+                a{
                     max-width: 150px;
                     margin: .5rem 0;
                     @media screen and (min-width:1200px) {
                         &:nth-of-type(2){
                             margin: 0 1rem;
+                            color: #a7a943;
                         }
                     }
                 }
@@ -390,6 +392,7 @@ nav.open {
                 }
             }
             &__status{
+                margin-top: 2rem;
                 a {
                     position: relative;
                     z-index: 1;
