@@ -235,8 +235,10 @@ nav.open {
                     padding: 1rem 2.5rem;
                     min-width: 450px;
                     width: 450px;
+                    outline: none;
                     transition: .3s;
-                    &:hover{
+                    &:hover,
+                    &:focus{
                         -ms-transform: scale(1.1); /* IE 9 */
                         -webkit-transform: scale(1.1); /* Safari 3-8 */
                         transform: scale(1.1); 
@@ -293,7 +295,7 @@ nav.open {
             padding-top: .5rem;
             &__item{
                 display: flex;
-                justify-content: center;
+                justify-content: center; 
                 position: relative;
                 text-align: center;
                 cursor: pointer;
@@ -321,7 +323,8 @@ nav.open {
                     transition: position 0.5s, bottom 0.5s;
                     transition: 1s;
                 }
-                &:hover {
+                &:hover,
+                &:focus {
                     font-size: 17px;
                     .instruments__container__item__card{
                         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;

@@ -302,9 +302,10 @@ nav.open ~ .overlay {
   padding: 1rem 2.5rem;
   min-width: 450px;
   width: 450px;
+  outline: none;
   transition: 0.3s;
 }
-.main .benefit__container__item .card:hover { /* IE 9 */ /* Safari 3-8 */
+.main .benefit__container__item .card:hover, .main .benefit__container__item .card:focus { /* IE 9 */ /* Safari 3-8 */
   transform: scale(1.1);
 }
 @media screen and (max-width: 500px) {
@@ -391,15 +392,16 @@ nav.open ~ .overlay {
   transition: position 0.5s, bottom 0.5s;
   transition: 1s;
 }
-.main .instruments__container__item:hover {
+.main .instruments__container__item:hover, .main .instruments__container__item:focus {
   font-size: 17px;
 }
-.main .instruments__container__item:hover .instruments__container__item__card {
+.main .instruments__container__item:hover .instruments__container__item__card, .main .instruments__container__item:focus .instruments__container__item__card {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   bottom: 1.2rem;
 }
 .main .instruments__container__item:hover .icon,
-.main .instruments__container__item:hover p {
+.main .instruments__container__item:hover p, .main .instruments__container__item:focus .icon,
+.main .instruments__container__item:focus p {
   bottom: -1.5rem;
   color: #3471B7;
 }
