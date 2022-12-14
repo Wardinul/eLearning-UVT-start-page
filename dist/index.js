@@ -1,3 +1,5 @@
+// Sidebar Functionality
+
 const body = document.querySelector("body"),
 navBar = document.querySelector("nav"),
 menuBtns = document.querySelectorAll(".menu-icon"),
