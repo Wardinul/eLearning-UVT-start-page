@@ -226,6 +226,7 @@ nav.open {
 
                 .card{
                     background: none;
+                    text-decoration: none;
                     background-image: url(card-bg.jpeg);
                     cursor: pointer;
                     background-size: cover;
@@ -297,14 +298,16 @@ nav.open {
                 text-align: center;
                 cursor: pointer;
                 height: 185px;
-                color: #084371;
                 border-radius: 15px;
                 margin: 2rem 0;
                 transition: .7s;
                 &__card{
+                    text-decoration: none;
                     position: relative;
+                    color: #084371;
                     height: 150px;
-                    width: 350px;
+                    width: 100%;
+                    max-width: 330px;
                     padding: 0 1rem;
                     border-radius: 10px;
                     bottom: -2rem;
