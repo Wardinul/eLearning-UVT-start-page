@@ -29,8 +29,8 @@ if (body.classList.contains("dark")) {
 
 // Accordion Functionality
 
-var acc = document.getElementsByClassName('nav-accordion__title');
-var i;
+let acc = document.getElementsByClassName('nav-accordion__title');
+let i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener('click', function () {

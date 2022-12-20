@@ -92,7 +92,8 @@ nav .connect-btn:hover span:after, nav .connect-btn:focus span:after {
   opacity: 1;
   right: 0;
 }
-nav .sidebar {
+
+.sidebar {
   position: fixed;
   top: 0;
   left: -100%;
@@ -103,7 +104,8 @@ nav .sidebar {
   box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
 }
-nav .menu-icon {
+
+.menu-icon {
   color: #FFFFFF;
   font-size: 24px;
   margin-right: 14px;
@@ -330,6 +332,10 @@ nav.open ~ .overlay {
 .main .benefit__container__item .card__title {
   text-align: center;
   font-weight: bold;
+  font-size: clamp(20px, 7vw, 28px);
+}
+.main .benefit__container__item .card__paragraph {
+  font-size: 15px;
 }
 @media screen and (min-width: 992px) {
   .main .instruments {
