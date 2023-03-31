@@ -2,7 +2,7 @@
 
 This is one of my personal projects meant to demonstrate my abilities in Design and Responsiveness in web.
 
-## Screenshot
+## Screenshots
 
 ### Desktop Design
 
