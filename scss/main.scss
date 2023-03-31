@@ -447,6 +447,7 @@ nav.open {
         &__container{
             > div{
                 margin-bottom: 1.5rem;
+                padding-left: 2rem;
             }
             &__title{
                 font-size: 18px;
@@ -518,6 +519,7 @@ nav.open {
                 }
             }
             &__social{
+                padding-left: 2rem !important;
                 a{
                     position: relative;
                     outline: none;
