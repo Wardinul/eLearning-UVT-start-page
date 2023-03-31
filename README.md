@@ -27,3 +27,5 @@ This is one of my personal projects meant to demonstrate my abilities in Design 
 ## Gifs
 
 ![](https://github.com/Wardinul/eLearning-UVT-start-page/blob/main/hero.gif)
+
+![](https://github.com/Wardinul/eLearning-UVT-start-page/blob/main/hover%20effects.gif)
