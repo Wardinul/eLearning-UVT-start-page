@@ -24,3 +24,6 @@ This is one of my personal projects meant to demonstrate my abilities in Design 
 
 ![](/images/Screenshot%20Mobile%20Design.png)
 
+## Gifs
+
+![](https://github.com/Wardinul/eLearning-UVT-start-page/blob/main/hero.gif)
