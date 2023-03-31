@@ -10,7 +10,7 @@ This is one of my personal projects meant to demonstrate my abilities in Design 
 
 ### Mobile Design
 
-![](/images/Mobile%20Design%20Screenshot.png)
+![](/images/Screenshot%20Mobile%20Design.png)
 
 ### Links
 
